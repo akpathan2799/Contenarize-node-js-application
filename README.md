@@ -39,7 +39,7 @@ This repository contains a containerized Node JS application ready for deploymen
    - Type: Custom TCP
    - Port: 8000
    - Source: Your IP address or 0.0.0.0/0 (for public access)
-   - Description: Django application port
+   - Description: Node JS application port
    ```
 4. Click "Save rules"
 
