@@ -4,7 +4,7 @@ FROM node
 WORKDIR /app
 
 #copy package.json to app
-COPY package.json
+COPY package.json /app
 
 # install node package manager
 RUN npm install
