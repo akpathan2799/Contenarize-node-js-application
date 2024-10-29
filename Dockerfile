@@ -16,4 +16,4 @@ COPY . .
 EXPOSE 3000
 
 # Specify the entry point for the application
-CMD ["node","app.js"]
+CMD ["npm","run","start"]
