@@ -33,11 +33,12 @@ WORKDIR /app
 COPY package.json /app
 RUN  npm install
 COPY . .
+RUN npm run build
 
 # Stage Two
 
 FROM gcr.io/distroless/nodejs18-debian12
 WORKDIR /app
-COPY --from=builder /app /app
+COPY --from=builder /app/dist /app
 EXPOSE 3000
-CMD ["npm","run","start"]
+CMD ["app.js"]
