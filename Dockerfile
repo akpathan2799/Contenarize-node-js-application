@@ -28,9 +28,9 @@
 #################################################
 
 # Stage One
-FROM node AS builder
+FROM node:18 AS builder
 WORKDIR /app
-COPY package.json /app
+COPY package.json package-lock.json /app
 RUN  npm install
 COPY . .
 RUN npm run build
@@ -41,4 +41,4 @@ FROM gcr.io/distroless/nodejs18-debian12
 WORKDIR /app
 COPY --from=builder /app/dist /app
 EXPOSE 3000
-CMD ["app.js"]
+CMD ["index.js"]
