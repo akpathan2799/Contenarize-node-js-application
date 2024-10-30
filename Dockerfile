@@ -30,7 +30,7 @@
 # Stage One
 FROM node AS builder
 WORKDIR /app
-COPY package.sjon /app
+COPY package.json /app
 RUN  npm install
 COPY . .
 
