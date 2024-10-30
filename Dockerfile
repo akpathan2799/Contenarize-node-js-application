@@ -31,7 +31,9 @@
 FROM node:18 AS builder
 WORKDIR /app
 COPY package.json package-lock.json /app
-RUN  npm install
+RUN npm install && \
+    npm install express
+  
 COPY . .
 RUN npm run build
 
