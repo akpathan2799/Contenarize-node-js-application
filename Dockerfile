@@ -41,4 +41,4 @@ FROM gcr.io/distroless/nodejs18-debian12
 WORKDIR /app
 COPY --from=builder /app/dist /app
 EXPOSE 3000
-CMD ["npm","run","start"]
+CMD ["index.js"]
