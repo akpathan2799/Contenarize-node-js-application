@@ -44,6 +44,6 @@ WORKDIR /app
 COPY --from=builder /app/dist /app
 COPY --from=builder /app/node_modules /app/node_modules
 COPY --from=builder /app/views /app/views
-COPY --from=builder /public /app/public
+COPY --from=builder /app/public /app/public
 EXPOSE 3000
 CMD ["index.js"]
